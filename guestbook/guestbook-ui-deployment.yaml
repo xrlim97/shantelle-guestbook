@@ -1,7 +1,8 @@
+# image: gcr.io/heptio-images/ks-guestbook-demo:0.1
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shantelle-guestbook
+  name: guestbook-ui
 spec:
   replicas: 3
   revisionHistoryLimit: 3
@@ -14,8 +15,7 @@ spec:
         app: shantelle-guestbook
     spec:
       containers:
-      # image: gcr.io/heptio-images/ks-guestbook-demo:0.1
-        image: docker.io/xrlim/simple-app:latest
-          name: shantelle-guestbook
-          ports:
-          - containerPort: 80
+      - image: docker.io/xrlim/simple-app:latest
+        name: shantelle-guestbook
+        ports:
+        - containerPort: 80
