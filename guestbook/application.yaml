@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/xrlim97/shantelle-guestbook.git
-    targetRevision: HEAD
+    targetRevision: main
     path: guestbook
   destination:
     server: https://kubernetes.default.svc
