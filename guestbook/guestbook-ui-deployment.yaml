@@ -14,8 +14,8 @@ spec:
         app: shantelle-guestbook
     spec:
       containers:
-      # - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
-        - image: docker.io/xrlim/simple-app:latest
-        name: shantelle-guestbook
-        ports:
-        - containerPort: 80
+      # image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+        image: docker.io/xrlim/simple-app:latest
+          name: shantelle-guestbook
+          ports:
+          - containerPort: 80
