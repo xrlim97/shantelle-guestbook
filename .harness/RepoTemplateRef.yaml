@@ -1,0 +1,69 @@
+pipeline:
+  name: RepoTemplateRef
+  identifier: RepoTemplateRef
+  tags: {}
+  template:
+    templateRef: Shantelle_Custom
+    versionLabel: "1"
+    templateInputs:
+      stages:
+        - stage:
+            identifier: testScript
+            type: Custom
+            timeout: <+input>
+            variables:
+              - name: tryOut
+                type: String
+                value: <+input>
+        - stage:
+            identifier: sampleSuccz
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: hhh
+                      template:
+                        templateInputs:
+                          type: ShellScript
+                          timeout: <+input>
+        - stage:
+            identifier: abc
+            template:
+              templateInputs:
+                type: Deployment
+                spec:
+                  environment:
+                    environmentRef: <+input>
+                    environmentInputs: <+input>
+                    serviceOverrideInputs: <+input>
+                    infrastructureDefinitions: <+input>
+                  service:
+                    serviceRef: <+input>
+                    serviceInputs: <+input>
+                  execution:
+                    steps:
+                      - stepGroup:
+                          identifier: test_step
+                          template:
+                            templateInputs:
+                              variables:
+                                - name: var1
+                                  type: String
+                                  value: <+input>
+                                - name: var3
+                                  type: String
+                                  value: <+input>
+                                - name: test
+                                  type: String
+                                  value: <+input>
+                timeout: <+input>
+                variables:
+                  - name: a
+                    type: String
+                    value: <+input>
+                  - name: trsting
+                    type: String
+                    value: <+input>
+  projectIdentifier: Shantelle_Project
+  orgIdentifier: UX_Team
