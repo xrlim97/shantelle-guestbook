@@ -7,7 +7,7 @@ template:
   orgIdentifier: UX_Team
   tags: {}
   spec:
-    timeout: <+input>
+    timeout: <+input>.allowedValues(abc)
     type: ShellScript
     spec:
       shell: Bash
@@ -16,6 +16,6 @@ template:
       source:
         type: Inline
         spec:
-          script: echo "waaa"
+          script: echo "waaaaaaa"
       environmentVariables: []
       outputVariables: []
