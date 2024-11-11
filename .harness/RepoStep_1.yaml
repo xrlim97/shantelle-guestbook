@@ -7,7 +7,7 @@ template:
   orgIdentifier: UX_Team
   tags: {}
   spec:
-    timeout: 10m
+    timeout: <+input>
     type: ShellScript
     spec:
       shell: Bash
